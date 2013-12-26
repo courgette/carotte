@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>  
+<meta charset="utf-8">
+<title>Carotte - Responsive Accessible Slider</title>
+<script src="http://code.jquery.com/jquery-1.4.4.min.js" type="text/javascript"></script>
+<script src="https://rawgithub.com/thomaslebeau/carotte/master/carotte.min.js" type="text/javascript"></script>
+<script src="https://rawgithub.com/thomaslebeau/carotte/master/carotte.auto.min.js" type="text/javascript"></script>
+<script src="https://rawgithub.com/thomaslebeau/carotte/master/carotte.carousel.min.js" type="text/javascript"></script>
+<script src="https://rawgithub.com/thomaslebeau/carotte/master/carotte.nav.min.js" type="text/javascript"></script>
+<script src="ready.js" type="text/javascript"></script>
+<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="less/style.css" />
+
+</head>
+<body>
+  <div id="wrapper">
+    <h1>Carotte</h1>
+    <div class="container-btn">
+      <a target="_blank" title="Nouvelle fenêtre : Code de Responsive Accessible Slideshow minifié" href="https://raw.github.com/thomaslebeau/carotte/master/carotte.min.js">Téléchargez carotte.min.js</a>
+      <a target="_blank" title="Nouvelle fenêtre : Repo Github du plugin Responsive Accessible Slideshow" href="https://github.com/thomaslebeau/carotte">Accéder au repo Github</a>
+    </div>
+    <ul id="slideshow">
+      <li><img src="img/500.jpeg" alt="image de chaton tout mignon" /></li>
+      <li><img src="img/500chat.jpg" alt="une autre image de chaton tout mignon" /></li>
+      <li><img src="img/500chat2.jpg" alt="désolé c'est encore un chaton" /></li>
+    </ul>
+    <h2>Comment installer Carotte ?</h2>
+    <pre>&lt;script src="carotte.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+  $.fn.ready(function(){
+    $('#slideshow').carotte();
+  });
+&lt;/script&gt;</pre>
+    <div>
+      <h3>Options de carotte</h3>
+      <pre>
+$('#slideshow').carotte({
+  duration:400, //durée du slide
+  textPrev:'prev', //texte pour le bouton prev
+  textNext:'next' //texte pour le bouton next
+});
+</pre>
+    </div>
+    <h2 id="autoslide">Carotte Autoslide</h2>
+    <div class="container-btn">
+      <a target="_blank" title="Nouvelle fenêtre : Code de Autoslide minifié" href="https://raw.github.com/thomaslebeau/carotte/master/carotte.auto.min.js">Téléchargez carotte.auto.min.js</a>
+    </div>
+    <ul id="slideshowAuto">
+      <li><img src="img/500.jpeg" alt="image de chaton tout mignon" /></li>
+      <li><img src="img/500chat.jpg" alt="une autre image de chaton tout mignon" /></li>
+      <li><img src="img/500chat2.jpg" alt="désolé c'est encore un chaton" /></li>
+    </ul>
+    <pre>&lt;script src="carotte.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="carotte.auto.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+  $.fn.ready(function(){
+    $('#slideshow').carotte().autoslide();
+  });
+&lt;/script&gt;</pre>
+  <div>
+      <h3>Options d'autoslide</h3>
+      <pre>
+$('#slideshow').carotte().autoslide({
+  time:2000, //durée entre chaque slide
+  textPlay:'play', //texte pour le bouton play
+  textStop:'stop', //texte pour le bouton stop
+  duration:400 //durée du slide
+});
+</pre>
+    </div>
+  <h2 id="carousel">carotte Carousel</h2>
+    <div class="container-btn">
+      <a target="_blank" title="Nouvelle fenêtre : Code de Carousel minifié" href="https://raw.github.com/thomaslebeau/carotte/master/carotte.carousel.min.js">Téléchargez carotte.carousel.min.js</a>
+    </div>
+    <ul id="slideshowCarousel">
+      <li><img src="img/500.jpeg" alt="image de chaton tout mignon" /></li>
+      <li><img src="img/500chat.jpg" alt="une autre image de chaton tout mignon" /></li>
+      <li><img src="img/500chat2.jpg" alt="désolé c'est encore un chaton" /></li>
+      <li><img src="img/500chat3min.png" alt="une autre image de chaton tout mignon" /></li>
+      <li><img src="img/500chat4min.png" alt="image de chaton tout mignon" /></li>
+      <li><img src="img/500chat5min.png" alt="image de chaton tout mignon" /></li>
+    </ul>
+    <pre>&lt;script src="carotte.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="carotte.carousel.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+  $.fn.ready(function(){
+    $('#slideshow').carotte().carousel();
+  });
+&lt;/script&gt;</pre>
+<div>
+      <h3>Options de carousel</h3>
+      <pre>
+$('#slideshow').carotte().carousel({
+  number:3, //groupe par n éléments (ici 3)
+  oneVisible:false, //slide 1 par 1 et laisse 1 de visible pour le responsive
+});
+</pre>
+    </div> 
+    <h2 id="navigation">carotte Navigation</h2>
+     <div class="container-btn">
+      <a target="_blank" title="Nouvelle fenêtre : Code de Nav minifié" href="https://raw.github.com/thomaslebeau/carotte/master/carotte.nav.min.js">Téléchargez carotte.nav.min.js</a>
+    </div>
+     <ul id="slideshowNav">
+      <li><img src="img/500.jpeg" alt="image de chaton tout mignon" /></li>
+      <li><img src="img/500chat.jpg" alt="une autre image de chaton tout mignon" /></li>
+      <li><img src="img/500chat2.jpg" alt="désolé c'est encore un chaton" /></li>
+    </ul>
+    <pre>&lt;script src="carotte.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="carotte.nav.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+  $.fn.ready(function(){
+    $('#slideshow').carotte().nav();
+  });
+&lt;/script&gt;</pre>
+    
+    <h2>Télécharger carotte</h2>
+    <div class="container-btn mt">
+      <a target="_blank" title="Nouvelle fenêtre : Code de Responsive Accessible Slideshow minifié" href="https://raw.github.com/thomaslebeau/carotte/master/carotte.min.js">Téléchargez carotte.min.js</a>
+      <a target="_blank" title="Nouvelle fenêtre : Repo Github du plugin Responsive Accessible Slideshow" href="https://github.com/thomaslebeau/carotte">Accéder au repo Github</a>
+    </div>
+  </div>
+   
+</body>
+</html>
