@@ -1,0 +1,203 @@
+.upper {
+  text-transform: uppercase;
+}
+.line {
+  text-decoration: underline;
+}
+.tnone {
+  text-decoration: none;
+}
+.ulreset ul,.ulreset li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.Arial {
+  font-family: 'Arial',sans-serif;
+}
+.Noto {
+  font-family: 'Noto Sans',sans-serif;
+  font-weight: 400
+}
+.NotoBold {
+  font-family: 'Noto Sans',sans-serif;
+  font-weight: 700;
+}
+.boxSizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+body {
+  font-family: 'Arial',sans-serif;
+  background: #ecf0f1;
+  font-size: .88em;
+  line-height: 1.4;
+}
+h1 {
+  font-family: 'Noto Sans',sans-serif;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px #FFF;
+  font-size: 3.5em;
+  color: #e67e22;
+  text-align: center;
+  line-height:1;
+  padding-top: 0.5em;
+}
+h2 {
+  font-family: 'Noto Sans',sans-serif;
+  font-weight: 700;
+  color: #e67e22;
+  font-size: 2em;
+  text-shadow: 1px 1px 1px #FFF;
+  border-bottom: 2px solid #999;
+}
+h3 {
+  font-family: 'Noto Sans',sans-serif;
+  font-weight: 700;
+  color: #e67e22;
+  font-size: 1.7em;
+  text-shadow: 1px 1px 1px #FFF;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+pre {
+  background: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #e67e22;
+  padding: 1em 1.5em;
+  font-size: 1.2em;
+  margin: 1em 0 0;
+}
+#wrapper {
+  width: 56%;
+  margin: auto;
+}
+.allCarotte {
+  padding: .5em .4em .2em .5em;
+  background: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  position: relative;
+}
+#navCarotte>button {
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;
+  background: #e67e22;
+  border: 0;
+  color: #FFF;
+  font-size: 2em;
+  height: 2em;
+  width: 1em;
+  cursor: pointer;
+  padding: .3em 0 .5em;
+}
+#navCarotte>button:hover,#navCarotte>button:focus {
+  background: #fff;
+  color: #e67e22;
+}
+#navCarotte .prev {
+  left: -1em;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 90px;
+  -webkit-border-top-left-radius: 90px;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 90px;
+  -moz-border-radius-topleft: 90px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 90px;
+  border-top-left-radius: 90px;
+}
+#navCarotte .next {
+  right: -1em;
+  -webkit-border-top-right-radius: 90px;
+  -webkit-border-bottom-right-radius: 90px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 90px;
+  -moz-border-radius-bottomright: 90px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 90px;
+  border-bottom-right-radius: 90px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.container-btn {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.container-btn a {
+  background: #e67e22;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  padding: .5em 1em;
+  font-size: 1.5em;
+  margin-left: 1em;
+  color: #FFF;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-family: 'Noto Sans',sans-serif;
+  font-weight: 700;
+}
+.container-btn a:hover,.container-btn a:focus {
+  background: #fff;
+  color: #e67e22;
+}
+.mt {
+  margin-top: 1.5em;
+}
+#navMultiple {
+  position: absolute;
+  bottom: 1em;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+#navMultiple button {
+  text-indent: -9999px;
+  border: 0;
+  border-radius: 90px;
+  height: 1.5em;
+  width: 1.5em;
+  margin-left: .5em;
+  background: #e67e22;
+  border: 2px solid #FFF;
+  cursor: pointer;
+}
+#navMultiple button.active,#navMultiple button:hover,#navMultiple button:focus {
+  background: #999;
+}
+

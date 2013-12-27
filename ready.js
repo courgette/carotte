@@ -1,0 +1,21 @@
+$.fn.ready(function(){
+  $("#slideshow").carotte({
+    textPrev:'‹',
+    textNext:'›'
+  });
+  $("#slideshowAuto").carotte({
+    textPrev:'‹',
+    textNext:'›'  
+  }).autoslide({
+    time:4000
+  });
+  $("#slideshowCarousel").carotte({
+    textPrev:'‹',
+    textNext:'›'  
+  }).carousel();
+  $('#slideshowNav').carotte({
+    textPrev:'‹',
+    textNext:'›'
+  }).nav();
+});
+
