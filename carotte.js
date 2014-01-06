@@ -59,7 +59,7 @@
               Carotteparent = elementCarotte.parent(),
               WinWidth = $(window).width();
           
-          var docWidth = $elementParent.width(),
+          var docWidth = Math.ceil($elementParent.width()),
               childsWidth = docWidth;
           
           childs.css({
