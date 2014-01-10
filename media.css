@@ -1,1 +1,34 @@
 /**/
+@media screen and (max-width: 600px) {
+  #wrapper {
+    width: 80%;
+  }
+  pre {
+    font-size: 1em;
+    word-wrap:break-word;
+  }
+  #navCarotte .prev, #navCarotte .next {
+    border-radius:0;
+  }
+  #navCarotte .prev { left: 0; border-right: 2px solid #FFF; }
+  #navCarotte .next { right: 0; }
+  #navCarotte > button {
+    top: -1em;
+    width: 50%;
+    height: 1em;
+    margin-top: 0;
+    font-family:Verdana;
+    line-height: 1em;
+    padding: 0;
+  }
+  .allCarotte {
+    margin-top: 5em;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  .container-btn a {
+    margin-left: 0;
+    font-size: 1.2em;
+  }
+}
