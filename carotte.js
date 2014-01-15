@@ -107,7 +107,6 @@
           //if User resize window
           $(window).resize(function(){
             var docWidth = Carotteparent.width();
-            console.log(docWidth);
             self.resizeMe(elementCarotte, docWidth, childLength);
           });
 
