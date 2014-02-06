@@ -65,16 +65,12 @@
             'position':'relative'
           });
         }
-        if(oneVisible){
-          changeValue(widthElement);
-          slideshow.attr('data-width',widthElement);
-          if(valueScreen < widthElement) {
-            changeValue(valueScreen);
-            slideshow.attr('data-width',valueScreen);
-          }
-        }/*else {
-          changeValue(docWidth);
-        }*/
+        changeValue(widthElement);
+        slideshow.width(widthElement*countElement);
+        if(valueScreen < widthElement) {
+          changeValue(valueScreen);
+          slideshow.attr('data-width',valueScreen);
+        }
       });
       
     });
