@@ -36,7 +36,7 @@
         });
         
       }else{
-        slideshow.closest('.allCarotte').find('#navCarotte').remove();
+        slideshow.closest('.allCarotte').find('.navCarotte').remove();
         var widthElement;
         ($(window).width() > 400 ? widthElement = docWidth/countElement : widthElement = $(window).width());
           

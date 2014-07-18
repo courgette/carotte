@@ -25,7 +25,7 @@
             identiant;
             (id ? identiant = id : identiant = classRas )
             
-            $element.wrap('<div class="allCarotte" id="AllCarotte-'+identiant+'"/>')
+            $element.wrap('<div class="allCarotte AllCarotte-'+identiant+'"/>')
         
         self.init(options, identiant);
         
@@ -41,10 +41,10 @@
         var self = this,
             $element = $(self.element),
             childs = $element.children(),
-            navigation = '<div id="navCarotte"><button class="btnSlideCarotte prev">'+options.textPrev+'</button><button class="btnSlideCarotte next">'+options.textNext+'</button></div>',
+            navigation = '<div class="navCarotte"><button class="btnSlideCarotte prev">'+options.textPrev+'</button><button class="btnSlideCarotte next">'+options.textNext+'</button></div>',
             childLength = childs.length,
             $elementParent = $element.parent();
-            $element.wrap('<div class="carotteContainer" id="CarotteContainer-'+id+'" style="width:100%; overflow:hidden;"/>'),
+            $element.wrap('<div class="carotteContainer CarotteContainer-'+id+'" style="width:100%; overflow:hidden;"/>'),
             $CarotteContainer = $element.parent();
         
         if(childLength > 1){
@@ -52,7 +52,7 @@
           // append navigation for Slide
           $CarotteContainer.before(navigation); 
           
-          var $navCarotte = $CarotteContainer.prev('#navCarotte'),
+          var $navCarotte = $CarotteContainer.prev('.navCarotte'),
               $CarotteSlideshow = $navCarotte.next().children(),
               elementCarotte = $(self.element),
               childs = elementCarotte.children(),
@@ -118,7 +118,7 @@
             elWidth = el.width(),
             firstSlide = el.children(':first'),
             lastSlide = el.children(':last'),
-            navMultiple = $('#navMultiple'); 
+            navMultiple = $('.navMultiple');
         
         function addClassNav() {
           var navSelected = el.find('.activeSlide').data('slide');

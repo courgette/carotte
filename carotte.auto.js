@@ -18,13 +18,13 @@
     return this.each(function(){
       var slideshow = $(this),
           parentSlideshow = $(this).parent().parent(),
-          navAutoSlide = '<button id="playCarotte">'+options.textPlay+'</button><button id="stopCarotte">'+options.textPause+'</button>',
-          navCarotte = parentSlideshow.find('#navCarotte');
+          navAutoSlide = '<button class="playCarotte">'+options.textPlay+'</button><button class="stopCarotte">'+options.textPause+'</button>',
+          navCarotte = parentSlideshow.find('.navCarotte');
       
       navCarotte.append(navAutoSlide);
       
-      var playBtn = navCarotte.find('#playRas'),
-          stopBtn = navCarotte.find('#stopRas')
+      var playBtn = navCarotte.find('.playRas'),
+          stopBtn = navCarotte.find('.stopRas')
       
       stopFct = function() {
         autoSlideShow = clearInterval(autoSlideShow);

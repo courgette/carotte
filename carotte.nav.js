@@ -13,7 +13,7 @@
     return this.each(function(){
       var self = this,
           container = $(self),
-          navigation = container.closest('.allCarotte').find('#navCarotte'),
+          navigation = container.closest('.allCarotte').find('.navCarotte'),
           childs = container.children(),
           dataW = container.data('width'),
           numberChild = childs.length;
@@ -24,10 +24,10 @@
       });
 
       navigation.each(function(){
-        $(this).prepend('<div id="navMultiple"/>');
+        $(this).prepend('<div class="navMultiple"/>');
       });
 
-      var navMultiple = navigation.find("#navMultiple");
+      var navMultiple = navigation.find(".navMultiple");
       
       for(var i = numberChild; i>=1; i--) {
         navMultiple.prepend('<button data-slide="'+(i-1)+'">'+i+'</button>');
