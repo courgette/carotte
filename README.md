@@ -1,4 +1,4 @@
 ##Carotte - Responsive Accessible Carousel
 
-http://thomaslebeau.github.io/carotte/
+http://courgette.github.io/carotte/
 
