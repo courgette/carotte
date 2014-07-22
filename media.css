@@ -7,12 +7,13 @@
     font-size: 1em;
     word-wrap:break-word;
   }
-  #navCarotte .prev, #navCarotte .next {
+  .navCarotte .prev, 
+  .navCarotte .next {
     border-radius:0;
   }
-  #navCarotte .prev { left: 0; border-right: 2px solid #FFF; }
-  #navCarotte .next { right: 0; }
-  #navCarotte > button {
+  .navCarotte .prev { left: 0; border-right: 2px solid #FFF; }
+  .navCarotte .next { right: 0; }
+  .navCarotte > button {
     top: -1em;
     width: 50%;
     height: 1em;
