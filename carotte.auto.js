@@ -26,8 +26,8 @@
       navCarotte.append(navAutoSlide);
       
       var playBtn = navCarotte.find('.playCarotte'),
-          stopBtn = navCarotte.find('.stopCarotte')
-      
+          stopBtn = navCarotte.find('.stopCarotte');
+
       stopFct = function() {
         autoSlideShow = clearInterval(autoSlideShow);
       };
