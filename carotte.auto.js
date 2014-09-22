@@ -8,7 +8,8 @@
       time:2000,
       textPlay:'play',
       textPause:'pause',
-      duration:700
+      duration:700,
+      pauseOnHover:false
     }
   };
   
@@ -17,10 +18,11 @@
     options = $.extend({}, r.autoslide.options, options);
     return this.each(function(){
       var slideshow = $(this),
-          parentSlideshow = $(this).parent().parent(),
-          navAutoSlide = '<button class="playCarotte">'+options.textPlay+'</button><button class="stopCarotte">'+options.textPause+'</button>',
-          navCarotte = parentSlideshow.find('.navCarotte');
-      
+        parentSlideshow = $(this).parent().parent(),
+        navAutoSlide = '<button class="playCarotte">'+options.textPlay+'</button><button class="stopCarotte">'+options.textPause+'</button>',
+        navCarotte = parentSlideshow.find('.navCarotte'),
+        paused = false;
+
       navCarotte.append(navAutoSlide);
       
       var playBtn = navCarotte.find('.playCarotte'),
@@ -31,7 +33,11 @@
       };
       
       playFct = function() {
-        autoSlideShow = setInterval(function(){$.fn.carotte.slide(slideshow, 'next', options.duration)}, options.time);
+        autoSlideShow = setInterval(function() {
+          if (!paused) {
+            $.fn.carotte.slide(slideshow, 'next', options.duration);
+          }
+        }, options.time);
       };
       
       //Slide
@@ -46,8 +52,17 @@
       stopBtn.bind('click', function(){
         stopFct();
       });
-       
-      
+
+      if (options.pauseOnHover) {
+        slideshow.hover(function() {
+            paused = true;
+          },
+          function() {
+            paused = false;
+          }
+        );
+      }
+
     });
     
   };
